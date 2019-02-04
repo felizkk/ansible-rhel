@@ -8,7 +8,9 @@
   tasks:
   - name: Install cockpit and dependancies on RHEL7
     yum:
-      name: "['cockpit', 'cockpit-dashboard']"
+      name:
+        - cockpit
+        - cockpit-dashboard
       state: present
       enablerepo: rhel-7-server-extras-rpms,rhel-7-server-optional-rpms
     when:
@@ -17,7 +19,9 @@
 
   - name: Install cockpit and dependancies on CentOS7
     yum:
-      name: "['cockpit', 'cockpit-dashboard']"
+      name:
+        - cockpit
+        - cockpit-dashboard        
       state: present
     when:
       - ansible_distribution == "CentOS"
