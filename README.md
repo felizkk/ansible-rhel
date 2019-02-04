@@ -1,2 +1,4 @@
 # ansible-rhel
-Ansible Playbook for RHEL
+Ansible Playbooks for RHEL
+Also contains playbooks for CentOS
+
