@@ -8,4 +8,11 @@
     hostname:
       # The variable name is sourced from dynamic inventory variable
       name: "{{ name }}"
+
+  - name: unconditionally reboot the machine with all defaults
+    reboot:
+
+  - name: wait for ansible connection
+    wait_for_connection:
+      timeout: 300  
 ...
