@@ -1,0 +1,11 @@
+---
+- name: Update RHEL Hostname
+  hosts: "{{ target_host_name }}*"
+  gather_facts: no
+  
+  tasks:
+  - name: update hostname
+    hostname:
+      # The variable name is sourced from dynamic inventory variable
+      name: "{{ name }}"
+...
